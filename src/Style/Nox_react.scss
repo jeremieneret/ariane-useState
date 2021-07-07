@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(15, 15, 41);
+  color: rgb(255, 240, 254);
+  font-family: "Comfortaa", cursive;
+  font-weight: lighter;
+  padding: 5%;
+}
+.App {
+  text-align: center;
+}
+h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 40px;
+  span {
+    font-size: 60px;
+    font-family: "Yesteryear", cursive;
+    text-transform: none;
+    color: pink;
+  }
+}
+
+.radio_ctnr {
+  margin-bottom: 12px;
+}
+
+label {
+  font-size: 24px;
+  transition: all 1200ms ease;
+}
+
+input[type="radio"] {
+  appearance: none;
+  margin: 0 8px;
+  &::before {
+    cursor: pointer;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #fafafa;
+    border-radius: 50%;
+    transition: all 1200ms ease;
+  }
+  &:checked::before {
+    background: aquamarine;
+    animation: Scale 700ms ease;
+  }
+  &:checked + label {
+    color: rgb(191, 255, 234);
+  }
+}
+
+@keyframes Scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  background: rgb(15, 15, 41);
+  font-weight: 700;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Comfortaa", cursive;
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto 0;
+  transition: all 5s ease;
+
+  span {
+    margin: auto;
+  }
+}
+
+img.rocket {
+  height: 25vh;
+  margin: 10vh 0;
+  transition: all 3s ease;
+  transition-delay: 1500ms;
+  &.active {
+    height: 25vh;
+    margin: 10vh 0;
+    transform: translateY(-850px);
+  }
+}
